@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import TodoneTitle from './TodoneTitle';
+import TodoTitle from '../common/TodoTitle';
 import TodoneList from './TodoneList';
 
 class ToDone extends Component {
@@ -16,9 +16,12 @@ class ToDone extends Component {
         this.props.onDel(index);
     }
     render() {
+        let len = this.props.todos.filter(function(el) {
+            return el.checked === true
+        }).length;
         return (
             <div className="todoList">
-                <TodoneTitle todos={this.props.todos} />
+                <TodoTitle todos={this.props.todos} title="已经完成" len={len}/>
                 <TodoneList
                     todos={this.props.todos}
                     onChecked={this.handleChecked}
