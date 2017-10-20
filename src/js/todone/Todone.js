@@ -20,7 +20,7 @@ class ToDone extends Component {
             return el.checked === true
         }).length;
         return (
-            <div className="todoList">
+            <div className="todos">
                 <TodoTitle todos={this.props.todos} title="已经完成" len={len}/>
                 <TodoneList
                     todos={this.props.todos}
