@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import TodoingItem from './TodoingItem';
+import TodoItem from '../common/TodoItem';
 
 class TodoingList extends Component {
     constructor(props) {
@@ -21,7 +21,7 @@ class TodoingList extends Component {
                     this.props.todos.map(
                         (value, index)=> {
                             if (value.checked === false) {
-                                return <TodoingItem
+                                return <TodoItem
                                     todos={value}
                                     key={value.id}
                                     index={index}

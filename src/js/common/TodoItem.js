@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 
-class TodoneItem extends Component {
+class TodoItem extends Component {
     constructor(props) {
         super(props);
         this.handleChange = this.handleChange.bind(this);
@@ -25,4 +25,4 @@ class TodoneItem extends Component {
     }
 }
 
-export default TodoneItem;
+export default TodoItem;
